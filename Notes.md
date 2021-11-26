@@ -6,6 +6,9 @@
   - Create a new app with `npx create-react-app my-app`
 - Babel is a js compiler that converts new js to old, stable js that's used by most browsers
 - Great extensions: Prettier and ES7 React/Redux/GraphQL/React-Native snippets
+- To use js inside jsx use {}
+- props are arguments that can be sent through components. Any name can be used, but props is convention
+  - Any number of arguments can be added, and those arguments can be called with props.argument notation
 
 ## Questions
 
