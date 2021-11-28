@@ -8,7 +8,10 @@
 - Great extensions: Prettier and ES7 React/Redux/GraphQL/React-Native snippets
 - To use js inside jsx use {}
 - props are arguments that can be sent through components. Any name can be used, but props is convention
-  - Any number of arguments can be added, and those arguments can be called with props.argument notation
+  - Any number of arguments can be added, and those arguments can be called with props.argument or props[argument] notation. The props can also be destructured so dot or bracket notation is not needed
+    - `const { img, title, author } = props`;
+  - Children are a special type of prop that are included between the tags, not as properties
+    - `<Book author={firstBook.author} title={firstBook.title} image={firstBook.img}> <p>This is a child prop</p> </Book>`
 
 ## Questions
 

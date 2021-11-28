@@ -36,16 +36,42 @@ ReactDom.render(<Greeting/>, document.getElementById('root'));      // Renders t
 // Create Book Section
 // Main rendered component
 const BookList = () => {
+  // Return a div that contains Book components depending on how many objects are in the book array
+  // books.id is simply a unique key that prevents a warning from react
   return <div>
-    <Book author={author} title={title} image={img}/>
-    <Book author="Mihir Sahu" title="Am I a Joke to You?" image="https://images-na.ssl-images-amazon.com/images/I/410HuA8C58S._SY291_BO1,204,203,200_QL40_FMwebp_.jpg"/>
+    {books.map((book) => {
+      return <Book key={books.id} image={book.img} title={book.title} author={book.author}/>
+    })}
   </div>
 }
 
-// Variables
-const author = 'Amelia Hepworth';
-const title = 'I Love You to the Moon and Back';
-const img = 'https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg';
+// Variables. An array of objects
+const books = [
+{
+  id: 1,
+  author: 'Amelia Hepworth',
+  title: 'I Love You to the Moon and Back',
+  img: 'https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg',
+},
+{
+  id: 2,
+  author: 'Amelia Hepworth',
+  title: 'I Love You to the Moon and Back',
+  img: 'https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg',
+},
+{
+  id: 3,
+  author: 'Mihir Sahu',
+  title: 'Am I a Joke to You?',
+  img: "https://images-na.ssl-images-amazon.com/images/I/410HuA8C58S._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+},
+{
+  id: 4,
+  author: 'Mihir Sahu',
+  title: 'Am I a Joke to You?',
+  img: "https://images-na.ssl-images-amazon.com/images/I/410HuA8C58S._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+}
+]
 
 // Supporting components
 const Book = (props) => {
