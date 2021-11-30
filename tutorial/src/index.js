@@ -2,6 +2,8 @@ import React from 'react';     // Import React
 import ReactDom from 'react-dom';
 // Import css file. CSS can be added through a css file or inline when returning jsx
 import './index.css'
+import {books} from './books.js'
+import {Book} from './Book.js'
 
 /*
 JSX Rules
@@ -43,55 +45,6 @@ const BookList = () => {
       return <Book key={books.id} image={book.img} title={book.title} author={book.author}/>
     })}
   </div>
-}
-
-// Variables. An array of objects
-const books = [
-{
-  id: 1,
-  author: 'Amelia Hepworth',
-  title: 'I Love You to the Moon and Back',
-  img: 'https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg',
-},
-{
-  id: 2,
-  author: 'Amelia Hepworth',
-  title: 'I Love You to the Moon and Back',
-  img: 'https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg',
-},
-{
-  id: 3,
-  author: 'Mihir Sahu',
-  title: 'Am I a Joke to You?',
-  img: "https://images-na.ssl-images-amazon.com/images/I/410HuA8C58S._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
-},
-{
-  id: 4,
-  author: 'Mihir Sahu',
-  title: 'Am I a Joke to You?',
-  img: "https://images-na.ssl-images-amazon.com/images/I/410HuA8C58S._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
-}
-]
-
-// Supporting components
-const Book = (props) => {
-  return <article className='booklist'>
-    <Image image={props.image}/>
-    <Title title={props.title}/>
-    <Author author={props.author}/>
-  </article>
-}
-
-const Title = (props) => {
-  return <h1>{props.title}</h1>
-}
-
-const Image = (props) => {
-  return <img src={props.image}></img>
-}
-
-const Author = (props) => {
-  return <h4>{props.author}</h4>
 }
 
 ReactDom.render(<BookList/>, document.getElementById('root'));
