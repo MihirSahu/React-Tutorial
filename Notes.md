@@ -31,6 +31,14 @@
 - Hosting
   - Netlify offers free hosting
   - To create a production instance of the website with npm, use `npm run build`. Then a build folder will be created in the directory, which can be uploaded to the hosting website
+- Hooks are a way to add dynamic functionality to the web page
+  - Hooks must be inside a function body
+  - Hooks cannot be called conditionally
+  - The components/functions that the hooks are in must be capitalized
+  - useState
+    - `import React, { useState } from 'react';`
+    - Pass in a default value
+    - Ex. `const [text, setText] = useState('random title')`
 
 ## Questions
 
