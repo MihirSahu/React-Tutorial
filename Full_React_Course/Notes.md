@@ -6,6 +6,9 @@
   - Create a new app with `npx create-react-app my-app`
 - Babel is a js compiler that converts new js to old, stable js that's used by most browsers
 - Great extensions: Prettier and ES7 React/Redux/GraphQL/React-Native snippets
+- To render jsx into html use the ReactDom module from react-dom
+  - `import ReactDOM from 'react-dom';`
+  - `ReactDom.render(<Component/>, document.getElementById('id'))`
 - To use js inside jsx use {}
 - JSX Rules
   - return single element
@@ -39,6 +42,7 @@
     - `import React, { useState } from 'react';`
     - Pass in a default value
     - Ex. `const [text, setText] = useState('random title')`
+- Spread operator `...` keeps the original values
 
 ## Questions
 
